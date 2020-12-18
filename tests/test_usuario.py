@@ -11,6 +11,14 @@ def test_chave_sendo_adicionadas_corretamente():
 
     assert len(usuario.opnioes) == 3
 
+
+
 def test_senha_Crypto():
     usuario = Usuario("Jardilene", "teste@teste.com", "123testando")
     assert usuario.senha != "123testando"
+
+
+
+def test_senha_correta():
+    usuario = Usuario("Vanderlei", "teste@teste.br", "123testando")
+    assert usuario.verifica_senha("123testando")
