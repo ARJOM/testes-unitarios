@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -- coding: utf-8 --
+
 from app.Usuario import Usuario
 from app.Similaridade import get_similaridade
 
