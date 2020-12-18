@@ -1,8 +1,11 @@
+import hashlib
+
+
 class Usuario:
 
     def __init__(self, nome, email, senha):
         self.nome = nome
-        self.senha = senha
+        self.senha = hashlib.md5(senha.encode()).hexdigest()
         self.email = email
         self.opnioes = {}
 
