@@ -11,3 +11,6 @@ class Usuario:
 
     def add_opniao(self, chave, valor):
         self.opnioes[chave] = valor
+
+    def verifica_senha(self, senha):
+        return hashlib.md5(senha.encode()).hexdigest() == self.senha 
